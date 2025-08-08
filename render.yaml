@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: astrology-predictions
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn astrology2:app
+    plan: free
